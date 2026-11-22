@@ -1,0 +1,80 @@
+{
+  "project": "BioASQ 12b Yes/No Question Answering",
+  "source_dataset": "mattmorgis/bioasq-12b-rag",
+  "source_url": "https://huggingface.co/datasets/mattmorgis/bioasq-12b-rag",
+  "dataset_configuration": "question-answer-passages",
+  "declared_license_on_hugging_face": "CC BY-NC-SA 4.0",
+  "retrieval_date": "2026-11-22",
+  "source_development_split": "dev",
+  "source_evaluation_split": "eval",
+  "question_type_filter": "yesno",
+  "label_mapping": {
+    "YES": 1,
+    "NO": 0
+  },
+  "label_extraction_rule": "Accept YES or NO only at the beginning of the natural-language answer field.",
+  "label_review_status": "Pending manual review of manual_label_audit.csv",
+  "evidence_source": "Text from the source snippets field",
+  "evidence_variations": [
+    "first 1 snippet",
+    "first 3 snippets",
+    "first 5 snippets",
+    "all available snippets"
+  ],
+  "evidence_order_note": "First-N snippets follow stored source order; no ranking score is assumed.",
+  "raw_question_type_counts": {
+    "dev": {
+      "summary": 1210,
+      "list": 967,
+      "yesno": 1357,
+      "factoid": 1515
+    },
+    "eval": {
+      "summary": 73,
+      "list": 80,
+      "factoid": 85,
+      "yesno": 102
+    }
+  },
+  "record_counts": {
+    "raw_dev_records": 5049,
+    "raw_source_eval_records": 340,
+    "yesno_dev_records": 1357,
+    "yesno_source_eval_records": 102,
+    "processed_dev_records": 914,
+    "processed_source_eval_records": 59,
+    "rejected_dev_records": 443,
+    "rejected_source_eval_records": 43,
+    "train_records": 731,
+    "validation_records": 91,
+    "internal_test_records": 92,
+    "source_eval_records": 59
+  },
+  "label_counts_by_split": {
+    "train": {
+      "YES": 541,
+      "NO": 190
+    },
+    "validation": {
+      "YES": 67,
+      "NO": 24
+    },
+    "internal_test": {
+      "YES": 68,
+      "NO": 24
+    },
+    "source_eval": {
+      "YES": 38,
+      "NO": 21
+    }
+  },
+  "split_ratio": "80:10:10 from source dev split",
+  "random_seed": 42,
+  "limitations": [
+    "This is a third-party processed derivative, not a verified byte-for-byte official BioASQ download.",
+    "The answer field contains natural-language ideal answers rather than the original structured exact_answer field.",
+    "YES/NO labels are candidate labels extracted from answer prefixes and require manual verification.",
+    "The source eval split is not independently verified as the official BioASQ golden test release.",
+    "The first-N evidence variations use stored snippet order; this order is not assumed to be a relevance ranking."
+  ]
+}
