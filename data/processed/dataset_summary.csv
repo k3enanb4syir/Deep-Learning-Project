@@ -1,0 +1,13 @@
+metric,count
+raw_dev_records,5049
+raw_source_eval_records,340
+yesno_dev_records,1357
+yesno_source_eval_records,102
+processed_dev_records,914
+processed_source_eval_records,59
+rejected_dev_records,443
+rejected_source_eval_records,43
+train_records,731
+validation_records,91
+internal_test_records,92
+source_eval_records,59
