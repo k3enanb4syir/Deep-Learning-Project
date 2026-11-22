@@ -1,0 +1,14 @@
+# Raw datasets
+data/raw/*
+!data/raw/.gitkeep
+
+# Processed datasets
+data/processed/*
+!data/processed/.gitkeep
+
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
